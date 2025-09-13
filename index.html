@@ -1,111 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Happy Birthday 🎉</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
-    />
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-    <style>
-      body {
-        margin: 0;
-        background: linear-gradient(135deg, #FFF2E1, #FFA94D);
-        overflow: hidden;
-        font-family: 'Arial', sans-serif;
-      }
+<head>
+  <meta charset="UTF-8">
+  <title>Birthday Cake</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #fefefe;
+    }
 
-      .happy-birthday-banner {
-        text-align: center;
-        margin-top: 50px;
-        font-size: 48px;
-        font-family: 'Pacifico', cursive;
-        color: #fff;
-        text-shadow: 2px 2px 5px #f4801b;
-      }
+    .cake {
+      position: relative;
+      width: 400px;
+      height: 250px;
+      background: #000;
+      border: 10px solid white;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    }
 
-      .candle-count-display {
-        text-align: center;
-        margin: 10px auto 20px auto;
-        font-size: 20px;
-        background-color: #fff5f7;
-        padding: 10px 20px;
-        border-radius: 12px;
-        border: 2px solid #f4801b86;
-        width: fit-content;
-        color: #fc8200;
-      }
+    .cake-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: cursive;
+      font-size: 2.2em;
+      font-weight: bold;
+      color: yellow;
+      text-align: center;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+    }
 
-      .candle-count-display span {
-        font-weight: bold;
-        color: #fc8200;
-      }
+    /* Decorations */
+    .decor {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 4px solid transparent;
+      box-sizing: border-box;
+    }
 
-      .cake {
-        position: relative;
-        width: 250px;
-        height: 200px;
-        margin: 50px auto;
-        z-index: 2;
-      }
+    .decor.yellow { border-color: yellow; }
+    .decor.pink { border-color: pink; }
+    .decor.blue { border-color: cyan; }
+    .decor.orange { border-color: orange; }
 
-      .plate {
-        width: 270px;
-        height: 110px;
-        position: absolute;
-        bottom: -10px;
-        left: -10px;
-        background-color: #ccc;
-        border-radius: 50%;
-        box-shadow: 0 2px 0 #b3b3b3, 0 4px 0 #b3b3b3, 0 5px 40px rgba(0, 0, 0, 0.5);
-      }
+    .decor.top-left { top: 10px; left: 10px; }
+    .decor.top-right { top: 10px; right: 10px; }
+    .decor.bottom-left { bottom: 10px; left: 10px; }
+    .decor.bottom-right { bottom: 10px; right: 10px; }
 
-      .layer {
-        display: block;
-        width: 250px;
-        height: 100px;
-        border-radius: 50%;
-        background: #FFD1DF;
-        position: absolute;
-      }
+    /* Candle */
+    .candle {
+      position: absolute;
+      top: 15%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 8px;
+      height: 40px;
+      background: navy;
+      border-radius: 3px;
+    }
 
-      .layer-top { top: 0; }
-      .layer-middle { top: 33px; }
-      .layer-bottom { top: 66px; }
-
-      .icing {
-        top: 2px;
-        left: 5px;
-        background-color: #f0e4d0;
-        width: 240px;
-        height: 90px;
-        border-radius: 50%;
-        position: absolute;
-        z-index: 1;
-      }
-      .icing:before {
-        content: "";
-        position: absolute;
-        top: 4px;
-        right: 5px;
-        bottom: 6px;
-        left: 5px;
-        background-color: #d5ffff;
-        border-radius: 50%;
-        box-shadow: 0 0 4px #f0e4d0, 0 0 4px #f0e4d0;
-        z-index: 1;
-      }
-
-      .drip {
-        width: 50px;
-        height: 60px;
-        border-bottom-left-radius: 25px;
-        border-bottom-right-radius: 25px;
-        background-color: #d5ffff;
-        position: absolute;
-      }
+    .flame {
+      position: absolute;
+      top: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 12px;
+      height: 12px;
+      background: gold;
+      border-radius: 50%;
+      box-shadow: 0 0 10px gold;
+    }
+  </style>
+</head>
+<body>
+  <div class="cake">
+    <div class="candle">
+      <div class="flame"></div>
+    </div>
+    <div class="cake-text">Happy<br>Birthday</div>
+    <div class="decor yellow top-left"></div>
+    <div class="decor pink top-right"></div>
+    <div class="decor orange bottom-left"></div>
+    <div class="decor blue bottom-right"></div>
+  </div>
+</body>
+</html>      }
 
       .drip1 {
         top: 53px;
